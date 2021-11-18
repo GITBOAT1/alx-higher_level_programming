@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 
 def Hex():
     for i in range(0, 99):
