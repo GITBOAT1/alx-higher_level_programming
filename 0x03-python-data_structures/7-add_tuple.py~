@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+"""Tupple Adding
+"""
+
+def add_tuple(tuple_a=(), tuple_b=()):
+    return(tuple_a + tuple_b)
