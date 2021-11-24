@@ -12,7 +12,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
         tuple_b += ze
     tup = list(tuple_a)
     tup1 = list(tuple_b)
-    for i in range(0, (len(tuple_a))):
+    for i in range(0, (len(tuple_a) - 1)):
         tup[i] = (tup[i] + tup1[i])
     ze = tuple(tup)
     return(ze)
