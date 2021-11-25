@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+"""Search and replace
+"""
+
+
+def search_replace(my_list, search, replace):
+    c = 0
+    for i in my_list:
+        if i == search:
+            my_list.remove(my_list[i])
+            my_list.insert(c, replace)
+    return(my_list)
