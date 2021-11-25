@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+"""Unique addition
+"""
+
+
+def uniq_add(my_list=[]):
+    uni = set(my_list)
+    a =[]
+    for i in range(len(uni)):
+        a.append(a += my_list[i])
+    return(a)
