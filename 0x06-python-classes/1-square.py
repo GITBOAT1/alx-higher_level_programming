@@ -10,7 +10,10 @@ class Square:
     size value.
 
     Args:
-        size(int): this tells the size of the figure
+        size: this tells the size of the figure
+
+    Attributes:
+        size: Human readable string describing the exception.
     """
     def __init__(self, size):
         self.__name = size
