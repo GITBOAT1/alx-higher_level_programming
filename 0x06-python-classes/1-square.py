@@ -13,4 +13,4 @@ class Square:
         size(int): this tells the size of the figure
     """
     def __init__(self, size):
-        pass
+        self.__name = size
