@@ -1,0 +1,44 @@
+"""
+This an add module.
+
+The example module supplies one function add_interger(a,b)
+
+"""
+>>> def add_integer(a, b=98):
+...	Err = " must be an integer"
+...     test = 0;
+...     if isinstance(a, (int, float)):
+...         test = 3
+...     if isinstance(b, (int, float)):
+...         test = test + 2
+...     if test == 5:
+...         return (int(a) + int(b))
+...     elif test == 2:
+...         raise TypeError('a' + Err)
+...     elif test == 3:
+...         raise TypeError('b' + Err)
+...
+>>> add_integer(1, 9)
+10
+>>> add_integer(2, 9)
+11
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
+>>> try:
+...     add_integer(4, "School")
+... except Exception as e:
+...     print(e)
+...
+b must be an integer
+>>> try:
+...     add_integer(None)
+... except Exception as e:
+...     print(e)
+... 
+a must be an integer
+>>> add_integer(2, -1)
+1

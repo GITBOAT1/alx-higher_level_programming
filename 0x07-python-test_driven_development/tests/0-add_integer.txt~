@@ -1,0 +1,34 @@
+>>> def add_integer(a, b=98):
+...     test = 0;
+...     if isinstance(a, (int, float)):
+...         test = 3
+...     if isinstance(b, (int, float)):
+...         test = test + 2
+...     if test == 5:
+...         return (int(a) + int(b))
+...     elif test == 2:
+...         raise TypeError('a' + Err)
+...     elif test == 3:
+...         raise TypeError('b' + Err)
+... 
+>>> add_integer(2, 9)
+11
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
+>>> try:
+...     print(add_integer(4, "school"))
+... except Exception as e:
+...     print(e)
+[<0;37;21M... 
+b must be an interger
+...
+>>> try:
+...     print(add_integer(None))
+... except Exception as e:
+...     print(e)
+... 
+a must be an interger
