@@ -5,15 +5,15 @@ Prototype: def add_integer(a, b=98):
     a function that adds 2 integers.
 """
 
-
 Err = " must be an interger"
-            
+
+
 def add_integer(a, b=98):
     """
     This is the "example" module.
     """
-    
-    test = 0;
+
+    test = 0
     if isinstance(a, (int, float)):
         test = 3
     if isinstance(b, (int, float)):
@@ -24,4 +24,3 @@ def add_integer(a, b=98):
         raise TypeError('b' + Err)
     elif test == 2:
         raise TypeError('a' + Err)
-
