@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+"""
+
+Divide a matrix
+
+"""
+
+
+def matrix_divided(matrix, div):
+""" this  this function divide tue ketr9    
