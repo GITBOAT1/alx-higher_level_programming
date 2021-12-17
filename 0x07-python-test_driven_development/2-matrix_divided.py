@@ -11,20 +11,15 @@ def matrix_divided(matrix, div):
     j = "matrix must be a matrix (list of lists) of integers/float"
     Nmatrix = []
     try:
-        te = 0
         if len(matrix) != 2:
-            te = 1
             raise TypeError("Each row of the matrix must have the same size")
-        if len(matrix[0]) != len(matrix[1]):
-            te = 1
-            raise TypeError(" Each row of the matrix must have the same size")
+        elif len(matrix[0]) != len(matrix[1]):
+            raise TypeError("matrix must have each row with the same size")
         elif div == 0:
-            te = 1
             raise ZeroDivisionError("division by zero")
         elif not isinstance(div, (int, float)):
-            te = 1
             raise TypeError("div must be a number")
-        if te == 0:
+        else:
             for i in matrix:
                 test = []
                 for a in i:

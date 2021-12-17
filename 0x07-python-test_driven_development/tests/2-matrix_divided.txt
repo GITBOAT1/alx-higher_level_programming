@@ -6,24 +6,27 @@ Divide a matrix
 """
 
 
+"""
+
+Divide a matrix
+
+"""
+
+
 >>> def matrix_divided(matrix, div):
 ...    """ this  this function divide """
+...    j = "matrix must be a matrix (list of lists) of integers/float"
 ...    Nmatrix = []
 ...    try:
-...        te = 0;
 ...        if len(matrix) != 2:
-...            te = 1;
-...            raise TypeError("Each row of the matrix must have the same size")
-...        if len(matrix[0]) != len(matrix[1]):
-...            te = 1
 ...            raise TypeError("Each row of the matrix must have the same size")
 ...        elif div == 0:
-...            te = 1
 ...            raise ZeroDivisionError("division by zero")
+...        elif len(matrix[0]) != len(matrix[1]):
+...            raise TypeError("Each row of the matrix must have the same size")
 ...        elif not isinstance(div, (int, float)):
-...            te = 1
 ...            raise TypeError("div must be a number")
-...        if te == 0:
+...        else:
 ...            for i in matrix:
 ...                test = []
 ...                for a in i:
@@ -31,20 +34,21 @@ Divide a matrix
 ...                        t = round(a / div, 2)
 ...                        test.append(t)
 ...                    else:
-...                        raise TypeError("matrix must be a matrix (list of lists) of integers/float")
+...                        raise TypeError(j)
 ...                Nmatrix.append(test)
 ...                del test
 ...            return(Nmatrix)
-...        
 ...    except Exception as e:
 ...        print(e)
 ...
 >>> matrix = [[1, 2, 3],[4, 5, 6]]
 >>> matrix_divided(matrix, 3)
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
->>> 
+>>>
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
 >>> matrix_divided(matrix, -1)
 [[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
+>>>
 >>>
 >>> matrix = [[1, 2, 3], [4, 5]]
 >>> matrix_divided(matrix, 3)
@@ -54,7 +58,19 @@ Each row of the matrix must have the same size
 >>> matrix_divided(matrix, 3)
 matrix must be a matrix (list of lists) of integers/float
 >>> 
->>> 
+>>> matrix = [[1, 2, 6], [4, 5]] 
+>>> matrix_divided(matrix, 0)
+division by zero
+>>>
+>>> matrix=[[3]]
+>>> matrix_divided(matrix, 3)
+Each row of the matrix must have the same size
+>>>
+>>> matrix = [[3, "9"], [12, 15]] 
+>>> matrix_divided(matrix, 3)
+matrix must be a matrix (list of lists) of integers/float
+>>>
+>>> matrix = [[3, 9], [12, 15]] 
 >>> matrix_divided(matrix, 0)
 division by zero
 >>> 
