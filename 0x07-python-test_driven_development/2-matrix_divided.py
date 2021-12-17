@@ -8,11 +8,12 @@ Divide a matrix
 
 def matrix_divided(matrix, div):
     """ this  this function divide """
+    j = "matrix must be a matrix (list of lists) of integers/float"
     Nmatrix = []
     try:
-        te = 0;
+        te = 0
         if len(matrix) != 2:
-            te = 1;
+            te = 1
             raise TypeError("Each row of the matrix must have the same size")
         if len(matrix[0]) != len(matrix[1]):
             te = 1
@@ -31,10 +32,9 @@ def matrix_divided(matrix, div):
                         t = round(a / div, 2)
                         test.append(t)
                     else:
-                        raise TypeError("matrix must be a matrix (list of lists) of integers/float")
+                        raise TypeError(j)
                 Nmatrix.append(test)
                 del test
             return(Nmatrix)
-        
     except Exception as e:
         print(e)
