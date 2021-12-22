@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
-6. Improve Geometry
+ Improve Geometry
 
 """
+
 
 class BaseGeometry:
     """Base geometry class"""

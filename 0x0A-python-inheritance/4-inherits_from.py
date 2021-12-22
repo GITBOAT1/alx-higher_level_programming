@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 4. Only sub class of
 
 """

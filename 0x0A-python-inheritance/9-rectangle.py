@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+9. Full rectangle
+"""
 
 
 class BaseGeometry:
