@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+"""
+0. Read file
+
+"""
+
+def read_file(filename=""):
+    """A simple func to read a file """
+    with open(filename, "r") as r:
+        r.read()
+    for i in r:
+        print(i, end="")
