@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-0. Read file
+0. append file
 
 """
 
