@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import json
 """
- To JSON epresentation of an object
+To JSON epresentation of an object
 
 """
+import json
 
 
 def to_json_string(my_obj):
