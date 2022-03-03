@@ -4,13 +4,15 @@
  * Write a script that searches the second biggest integer in the list of arguments.
  */
 
-const pro = process.argv[2]
-
-let s = 0
-for (let i = 2; i < process.argv.length; i++) {
-  const l = Number(process.argv[i])
-  if (l > s) {
-    s = l
+'use strict';
+if ((process.argv.length <= 3)) {
+  console.log(0);
+} else {
+  let numArray = [];
+  for (let i = 2; i < process.argv.length; i++) {
+    numArray.push(parseInt(process.argv[i]));
+    numArray = numArray.sort();
   }
+  numArray.reverse();
+  console.log(numArray[1]);
 }
-console.log(s)
