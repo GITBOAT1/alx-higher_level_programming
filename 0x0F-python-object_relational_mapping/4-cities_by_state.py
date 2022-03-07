@@ -11,9 +11,11 @@ def host():
         db = MySQLdb.connect(host=MY_HOST, user=sys.argv[1],
                              passwd=sys.argv[2], db=sys.argv[3])
         cur = db.cursor()
-
-        cur.execute("SELECT * FROM states")
-
+        cy_st = ""
+        sq = ""
+        cur.execute("SELECT cities.id, cities.name, states.name"
+                    " FROM cities INNER JOIN states ON "
+                    "states.id = cities.state_id ORDER BY cities.id ASC")
         for i in cur:
             """ print all the valuse in states """
             print(i)
