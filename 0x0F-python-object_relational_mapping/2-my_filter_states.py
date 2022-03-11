@@ -18,9 +18,9 @@ def host():
         """ print all the valuse in states """
         print(i)
 
-        """ close the data base """
-        cur.close()
-        db.close()
+    """ close the data base """
+    cur.close()
+    db.close()
 
 
 if __name__ == "__main__":
