@@ -12,7 +12,8 @@ def host():
                          passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
     name = sys.argv[4]
-    cur.execute("SELECT * FROM states WHERE name = '{}'".format(name))
+    cur.execute("SELECT * FROM states WHERE name = '{}'"
+                "ORDER BY states.id ASC".format(name))
 
     for i in cur:
         """ print all the valuse in states """
