@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+""" POST an email #0 """
 from urllib import request, parse
 import sys
-""" display the header """
 
 
 def xhead(url, mail):

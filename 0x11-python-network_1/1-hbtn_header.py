@@ -4,7 +4,6 @@ from urllib import request
 import sys
 
 
-
 def xhead(x):
     """get the header X-Request-ID"""
     with request.urlopen(x) as resp:

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
-"""fetches status of https://intranet.hbtn.io/status"""
+""" What's my status? #1 """
 import requests
 
 r = requests.get('https://intranet.hbtn.io/status')
