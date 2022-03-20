@@ -11,6 +11,5 @@ def xhead(x):
         print(data)
 
 
-if __name__ == __name__:
-    if sys.argv[1]:
-        xhead(sys.argv[1])
+if __name__ == "__main__":
+    xhead(sys.argv[1])
