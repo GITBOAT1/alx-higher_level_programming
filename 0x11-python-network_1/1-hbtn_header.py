@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+""" display the header """
 from urllib import request
 import sys
-""" display the header """
+
 
 
 def xhead(x):
