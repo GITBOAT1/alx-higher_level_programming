@@ -3,10 +3,11 @@
 
 const fs = require("request");
 const myArgs = process.argv.slice(2);
-
-fs(myArgs[0], function (err, response) {
+const url = "https://swapi-api.hbtn.io/api/films/" + myArgs[0];
+fs(url, function (err, data, body) {
   if (err) {
     return console.error(err);
   }
-  console.log("code:", response && response.statusCode);
+  const str = JSON.parse(body);
+  console.log(str["title"]);
 });
