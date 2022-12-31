@@ -17,8 +17,7 @@ def host():
 
     for i in cur:
         """ print all the valuse in states """
-        if (i[1] == name):
-            print(i)
+        print(i)
 
     """ close the data base """
     cur.close()
