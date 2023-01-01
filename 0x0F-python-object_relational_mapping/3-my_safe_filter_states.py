@@ -9,14 +9,14 @@ def host():
     if len(sys.argv) == 5:
         MY_HOST = "localhost"
 
-        db = MySQLdb.connect(host=MY_HOST, user=sys.argv[1],
+        db = MySQLdb.connect(ho-st=MY_HOST, user=sys.argv[1],
                              passwd=sys.argv[2], db=sys.argv[3])
         cur = db.cursor()
         name = sys.argv[4]
         s = "SELECT * FROM states WHERE name = '%s'  ORDER BY states.id ASC"
         cur.execute(s % name)
 
-        for i in cur:
+        for i in cur.fetchall():
             """ print all the valuse in states """
             print(i)
 
