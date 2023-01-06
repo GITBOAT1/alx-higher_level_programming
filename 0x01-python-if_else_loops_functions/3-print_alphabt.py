@@ -3,4 +3,4 @@ for i in range(97, 123):
     if ((i == (97+4)) or (i == (97+16))):
         pass
     else:
-        print(chr(i), end="")
+        print('{}'.format(chr(i)), end="")
