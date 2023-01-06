@@ -3,13 +3,14 @@
 import random
 number = random.randint(-10000, 10000)
 
-la = number % 10
 s = "Last digit of"
 strn = "and is less than 6 and not 0"
-
+la = number % 10
 """ check if its nagative """
 if (number < 0):
-    print("{} {:d} is {:d} {}".format(s, number, la, strn))
+    la = int(str(number)[-1:])
+    la = (-1) * la
+    print("{} {:d} is {:d} and is less than 6 and not 0".format(s, number, la))
 else:
     if int(la) > 5:
         print("{} {:d} is {:d} and is greater than 5".format(s, number, la))
