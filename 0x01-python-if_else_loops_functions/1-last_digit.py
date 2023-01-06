@@ -18,5 +18,5 @@ else:
         print("{} {:d} is {:d} and is 0".format(s, number, la))
     elif int(la) < 6 and int(la) != 0:
         print("{} {:d} is {:d} {}".format(s, number, la, strn))
-    elif (number != int):
-        print("TypeError")
+    else:
+        raise
