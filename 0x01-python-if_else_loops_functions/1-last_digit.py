@@ -9,7 +9,6 @@ strn = "and is less than 6 and not 0"
 
 """ check if its nagative """
 if (number < 0):
-    la = (-1) * la
     print("{} {:d} is {:d} {}".format(s, number, la, strn))
 else:
     if int(la) > 5:
