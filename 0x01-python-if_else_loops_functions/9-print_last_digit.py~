@@ -1,6 +1,0 @@
-#!/usr/bin/python3
-""" Program to check if  last digit is """
-
-def print_last_digit(number):
-    return abs(number) % 10
-    
