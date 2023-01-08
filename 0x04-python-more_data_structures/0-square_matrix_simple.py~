@@ -1,8 +1,0 @@
-#!/usr/bin/python3
-"""Squared simple
-"""
-
-
-def square_matrix_simple(matrix=[]):
-    for i in matrix:
-        return(i)

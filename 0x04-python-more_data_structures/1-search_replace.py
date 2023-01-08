@@ -4,11 +4,7 @@
 
 
 def search_replace(my_list, search, replace):
-    c = 0
-    my_list1 = list(my_list)
-    for i in my_list1:
-        if i == search:
-            my_list1.remove(my_list1[i])
-            my_list1.insert(c, replace)
-        c += 1
-    return(my_list1)
+    """ search and replace """
+
+    new_list = [i if i != search else replace for i in my_list]
+    return (new_list)
