@@ -8,8 +8,8 @@ def weight_average(my_list=[]):
         integers tuple
     """
 
-       if my_list:
-           res = sum(a * b for a, b in my_list) / sum(b for a, b in my_list))
-           return (res)
+    if my_list:
+        res = sum(a * b for a, b in my_list) / sum(b for a, b in my_list)
+        return (res)
 
-    return(0)
+    return (0)
