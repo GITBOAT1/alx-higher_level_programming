@@ -1,33 +1,36 @@
 #!/usr/bin/python3
+"""Square with size"""
 
 
 class Square:
-    """initializes square, determines size, calculates area, prints"""
+    """ The size of a square is crucial for a square, many things depend of it
+    """
+    __size = None
+    __position
+
     def __init__(self, size=0, position=(0, 0)):
-        """initializes instance of square
-        Args:
-            size: size of square
-            position: position to indent square
-        """
-        self.size = size
-        self.position = position
+        """ init method """
+        self.__size = size
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
 
     def area(self):
-        """Determines area"""
-        return (self.__size ** 2)
+        return (self.__size * self.__size)
 
     @property
     def size(self):
-        """gets size"""
-        return self.__size
+        """ property get to retrieve it """
+        return (self.__size)
 
     @size.setter
     def size(self, value):
-        """sets size"""
-        if type(value) is not int:
-            raise TypeError('size must be an integer')
+        """ property setter to set """
+        if type(value) != int:
+            raise TypeError("size must be an integer")
         elif value < 0:
-            raise ValueError('size must be >= 0')
+            raise ValueError("size must be >= 0")
         else:
             self.__size = value
 
@@ -52,11 +55,13 @@ class Square:
             self.__position = value
 
     def my_print(self):
-        """prints square offsetting it by position with symbol #"""
-        if self.size == 0:
-            print('')
-            return
-        for i in range(self.__position[1]):
-            print('')
-        for i in range(self.__size):
-            print("{}{}".format(' ' * self.__position[0], '#' * self.__size))
+        """    Printing a square """
+        s = self.size
+        if s == 0:
+            print("")
+        else:
+            for i in range(self.__position[1]):
+                print('')
+            for i in range(self.__size):
+                print("{}{}".format(' ' * self.__position[0],
+                                    '#' * self.__size))
