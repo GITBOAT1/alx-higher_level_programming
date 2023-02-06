@@ -17,12 +17,24 @@ class Square:
 
     def area(self):
         return (self.__size * self.__size)
+
     @property
     def size(self):
         """ property get to retrieve it """
         return (self.__size)
-    
+
     @size.setter
     def size(self, value):
         """ property setter to set """
-        self.__size = value
+        if type(value) != int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
+
+    def my_print(self):
+        """    Printing a square """
+        s = self.size
+        for i in range(s):
+            print("#" * self.size)
