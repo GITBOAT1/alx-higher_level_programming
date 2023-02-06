@@ -15,9 +15,8 @@ class Square:
     Attributes:
         size: Human readable string describing the exception.
     """
-    def __init__(self, size=0):
+    __size = None
+
+    def __init__(self, size):
+        """ init method """
         self.__name = size
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError('size must be >= 0')
