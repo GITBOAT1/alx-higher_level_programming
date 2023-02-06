@@ -15,5 +15,7 @@ class Square:
     Attributes:
         size: Human readable string describing the exception.
     """
+    __size = None
+
     def __init__(self, size):
-        self.__name = size
+        self.__size = size
