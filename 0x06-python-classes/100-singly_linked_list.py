@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ single linklist """
 
+
 class Node:
     """creates node for singly linked lists"""
 
