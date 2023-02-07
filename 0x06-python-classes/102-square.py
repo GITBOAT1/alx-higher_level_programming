@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" squre and determines area """
 
 
 class Square:
