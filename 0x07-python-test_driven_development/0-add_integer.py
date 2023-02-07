@@ -10,9 +10,8 @@ def add_integer(a=0, b=98):
     This is the "example" module.
     """
 
-    if not isinstance(a, (int, float)):
+    if a is None or (type(a) is not int and type(a) is not float):
         raise TypeError("a must be an integer")
-    elif not isinstance(b, (int, float)):
+    if type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
-    else:
-        return (int(a) + int(b))
+    return a + b
