@@ -6,7 +6,6 @@ class Square:
     """ The size of a square is crucial for a square, many things depend of it
     """
     __size = None
-    __position
 
     def __init__(self, size=0, position=(0, 0)):
         """ init method """
@@ -15,6 +14,7 @@ class Square:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
+        self.position = position
 
     def area(self):
         return (self.__size * self.__size)
