@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 import math
-""" magic """
+""" magic ython class MagicClass that does exactly the
+    same as the following Python bytecode:
+"""
 
 
 class MagicClass:
-    """Magic class that does same as given bytecode output"""
+    """ Magic class that does same as given bytecode output """
 
     def __init__(self, radius=0):
         """initialize radius"""
