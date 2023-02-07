@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """
 Prototype: def add_integer(a, b=98):
-
     a function that adds 2 integers.
 """
 
-Err = " must be an interger"
+Err = "must be an interger"
 
 
 def add_integer(a, b=98):
