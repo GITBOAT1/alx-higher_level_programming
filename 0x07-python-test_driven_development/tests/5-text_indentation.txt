@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+"""
+This an add module.
+
+The example module test for adding name function
+
+"""
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    raise TypeError(msg1)
+TypeError: text must be a string
+
+>>> text_indentation("hello world")
+hello world
+>>> text_indentation(":hello")
+<BLANKLINE>
+<BLANKLINE>
+hello
+
+
