@@ -25,8 +25,3 @@ hello world
 <BLANKLINE>
 hello
 
->>> text_indentation(“Holberton. School? How are you: John”)
-Traceback (most recent call last):
-  File "<stdin>", line 1
-SyntaxError: invalid character '“' (U+201C)
->>> 
