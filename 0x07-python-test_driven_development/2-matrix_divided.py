@@ -13,13 +13,16 @@ def matrix_divided(matrix, div):
     Nmatrix = []
 
     for row in matrix:
-        row_len = len(matrix[0])
+        if not isinstance(row, list):
+            raise TypeError(msg1)
+        else:
+            row_len = len(matrix[0])
         if not isinstance(div, (int, float)):
             raise TypeError("div must be a number")
         elif div == 0:
             raise ZeroDivisionError('division by zero')
         if isinstance(row, list):
-            a = 0
+            a = 1
             for i in row:
                 if not isinstance(i, (int, float)):
                     raise TypeError(msg1)
