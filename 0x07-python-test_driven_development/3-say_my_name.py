@@ -1,29 +1,18 @@
 #!/usr/bin/python3
 """
 
-Divide a matrix
+ a function that prints My name is <first name> <last name>
 
 """
 
+msg1 = "first_name must be a string"
+msg2 = "last_name must be a string"
 
-def matrix_divided(matrix, div):
-    """ this  this function divide """
-    Nmatrix = []
-    if len(matrix[0]) > len(matrix[1]):
-       raise TypeError("Each row of the matrix must have the same size")
-    if len(matrix) > 2:
-        #raise TypeError("Each row of the matrix must have the same size")
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
-    if not isinstance(div, (int, float)):
-        raise TypeError("div must be a number")
-    
-    for i in range(matrix):
-        test = []
-        for a in range(i):
-            if isinstance(a, (int, float)):
-                test.append(a / div)
-            else:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-        Nmatrix.append(test)
-        del test
+
+def say_my_name(first_name, last_name=""):
+    if not isinstance(first_name, str):
+        raise TypeError(msg1)
+    if not isinstance(last_name, str):
+        raise TypeError(msg2)
+    else:
+        print("My name is {} {}".format(first_name, last_name))
