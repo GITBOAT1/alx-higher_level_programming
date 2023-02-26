@@ -9,7 +9,7 @@ Divide a matrix
 def matrix_divided(matrix, div):
     """ this  this function divide """
     msg1 = "matrix must be a matrix (list of lists) of integers/floats"
-    msg2 = "matrix must have each row with the same size"
+    msg2 = "Each row of the matrix must have the same size"
     Nmatrix = []
 
     for row in matrix:
@@ -19,13 +19,22 @@ def matrix_divided(matrix, div):
         elif div == 0:
             raise ZeroDivisionError('division by zero')
         if isinstance(row, list):
+            a = 0
             for i in row:
                 if not isinstance(i, (int, float)):
                     raise TypeError(msg1)
                 if row_len != len(row):
                     raise TypeError(msg2)
-                Nmatrix1 = [round(ls1 / div, 2) for ls1 in row]
-            Nmatrix.append(Nmatrix1)
+                try:
+                    Nmatrix1 = [round(ls1 / div, 2) for ls1 in row]
+                    a = 0
+                except TypeError:
+                    a = 1
+                    break
+            if a == 0:
+                Nmatrix.append(Nmatrix1)
+            else:
+                raise TypeError(msg1)
         else:
             raise TypeError(msg1)
     return (Nmatrix)
