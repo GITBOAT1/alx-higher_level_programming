@@ -1,0 +1,68 @@
++"""
+This an add module.
+
+The example module supplies one function add_interger(a,b)
+
+"""
+>>> def add_integer(a, b):
+...     """ Doc """
+...     if a is None or (type(a) is not int and type(a) is not float):
+...         raise TypeError("a must be an integer")
+...     if type(b) is not int and type(b) is not float:
+...         raise TypeError("b must be an integer")
+...     return int(a) + int(b)
+... 
+>>> add_integer(1, 9)
+10
+>>> add_integer(2, 9)
+11
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100cl
+>>> add_integer(100.3, -2)
+98
+>>> try:
+...     add_integer(type(int), type(str))
+... except Exception as e:
+...     print(e)
+... 
+a must be an integer
+>>> try:
+...     add_integer(None)
+... except Exception as e:
+...     print(e)
+... 
+a must be an integer
+>>> add_integer(2, -1)
+1
+>>> try:
+...     add_integer(1, "")
+... except Exception as e:
+...     print(e)
+... 
+b must be an integer
+>>> try:
+...     add_integer("", 8)
+... except Exception as e:
+...     print(e)
+... 
+a must be an integer
+>>> try:
+...      add_integer(None)
+... except Exception as e:
+...     print(e)
+... 
+a must be an integer
+>>> try:
+...      add_integer()
+... except Exception as e:
+...     print(e)
+... 
+add_integer() missing 1 required positional argument: 'a'
+>>> try:
+...      add_integer(8, 12, 9)
+... except Exception as e:
+...     print(e)
+... 
+add_integer() takes from 1 to 2 positional arguments but 3 were given
