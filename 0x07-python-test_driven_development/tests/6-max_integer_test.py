@@ -4,13 +4,8 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-class TestMaxInteger(unittest.TestCase):
-    """
-import unittest
-max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
-
     def testForImport(self):
         self.assertTrue(__import__('6-max_integer').max_integer)
 
