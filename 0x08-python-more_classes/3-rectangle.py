@@ -49,14 +49,22 @@ class Rectangle:
 
     def area(self):
         """ Public instance method that returns the rectangle area """
-        height = self.__height
-        weight = self.__weight
+        height = self.height
+        weight = self.width
         return (height * weight)
 
     def perimeter(self):
         """ Public instance method that returns the rectangle perimeter """
-        height = self.__height
-        weight = self.__weigh
+        height = self.height
+        weight = self.width
         if height == 0 or weight == 0:
             return (0)
-        return (2(height + weight))
+        per = (height + weight)
+        return (per * 2)
+
+    def __str__(self):
+        """prints rectangle"""
+        if self.height == 0 or self.width == 0:
+            return ''
+        hashes = '#' * self.width
+        return '\n'.join(hashes for i in range(self.height))
