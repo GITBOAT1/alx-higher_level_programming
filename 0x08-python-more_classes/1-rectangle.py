@@ -7,21 +7,23 @@ Rectangle that defines a rectangle by: (based on 0-rectangle.py)
 
 class Rectangle:
     """ An empty Rectangle """
+
     def __init__(self, width=0, height=0):
+        """ instantiat width """
         self.height = height
         self.width = width
 
     @property
     def width(self):
         """
-        return the value in width 
+        return the value in width
         """
-        return(self.width)
+        return (self.__width)
 
     @width.setter
     def width(self, value):
         """
-        setter for width 
+        setter for width
         """
         if isinstance(value, (int)):
             if value < 0:
@@ -30,11 +32,10 @@ class Rectangle:
         else:
             raise TypeError("width must be an integer")
 
-
     @property
     def height(self):
         """ return the value in width """
-        return(self.height)
+        return (self.__height)
 
     @height.setter
     def height(self, value):
