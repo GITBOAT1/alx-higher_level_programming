@@ -55,7 +55,7 @@ class Rectangle(Base):
         self.__width = width
 
     @height.setter
-    def heigth(self, height):
+    def height(self, height):
         """ set the values
         """
         self.__height = height
