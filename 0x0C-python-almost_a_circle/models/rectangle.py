@@ -11,6 +11,12 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """constructor, initialize the private vales
+        Args
+           width
+           height
+           x
+           y
+           id - from Base class
         """
         self.__width = width
         self.__height = height
