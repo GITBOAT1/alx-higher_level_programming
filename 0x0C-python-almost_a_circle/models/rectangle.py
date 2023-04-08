@@ -52,22 +52,38 @@ class Rectangle(Base):
     def width(self, width):
         """ set the values
         """
+        if not isinstance(width, int):
+            raise TypeError('{} must be an integer'.format('width'))
+        if width <= 0:
+            raise ValueError('{} must be > 0'.format('width'))
         self.__width = width
 
     @height.setter
     def height(self, height):
         """ set the values
         """
+        if not isinstance(height, int):
+            raise TypeError('{} must be an integer'.format('height'))
+        if height <= 0:
+            raise ValueError('{} must be > 0'.format('height'))
         self.__height = height
 
     @x.setter
     def x(self, x):
         """ set the values
         """
+        if not isinstance(x, int):
+            raise TypeError('{} must be an integer'.format('x'))
+        if x < 0:
+            raise ValueError('{} must be > 0'.format('x'))
         self.__x = x
 
     @y.setter
     def y(self, y):
         """ set the values
         """
+        if not isinstance(y, int):
+            raise TypeError('{} must be an integer'.format('y'))
+        if y < 0:
+            raise ValueError('{} must be > 0'.format('y'))
         self.__y = y
