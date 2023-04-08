@@ -1,6 +1,9 @@
 #!/bin/python3
+""" The base for the rectagle """
+
 
 class Base:
+    """ the first class Base """
     __nb_objects = 0
 
     def __init__(self, id=None):
