@@ -6,7 +6,8 @@ Defines the class Rectangle
 
 
 class Rectangle(Base):
-    """ class Rectangle that inherits from Base """
+    """ class Rectangle that inherits from Base
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """constructor, initialize the private vales
