@@ -29,7 +29,7 @@ class Rectangle(Base):
     def width(self):
         """ width of Rectangle
         """
-        return self.__wdidth
+        return self.__width
 
     @property
     def height(self):
