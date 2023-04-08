@@ -49,13 +49,13 @@ class Rectangle(Base):
         return self.__y
 
     @width.setter
-    def widht(self, width):
+    def width(self, width):
         """ set the values
         """
         self.__width = width
 
     @height.setter
-    def height(self, height):
+    def heigth(self, height):
         """ set the values
         """
         self.__height = height
