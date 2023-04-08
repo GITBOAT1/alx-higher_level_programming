@@ -1,15 +1,10 @@
-#!/usr/bin/python3
-"""
- first class Base
-"""
-
+#!/bin/python3
 
 class Base:
-    """ base class """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ first class method """
+        """ Base class """
         self.id = id
         if id is None:
             Base.__nb_objects += 1

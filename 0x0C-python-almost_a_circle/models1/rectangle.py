@@ -8,14 +8,10 @@ the class Rectangle that inherits from Base
 
 class Rectangle(Base):
     """Rectangle that inherits from Base:"""
-    __width -> width
-    __height -> height
-    __x -> x
-    __y -> y
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        args width height x y and id 
+        args width height x y and id
         """
         self.width = width
         self.height = height
@@ -23,7 +19,7 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-      @property
+    @property
     def width(self):
         """gets width"""
         return (self.__width)
@@ -89,4 +85,42 @@ class Rectangle(Base):
             raise TypeError('{} must be an integer'.format('y'))
         if value < 0:
             raise ValueError('{} must be >= 0'.format('y'))
-        self.__y = value  
+        self.__y = value
+
+    def area(self):
+        """returns area of rectangle"""
+        return(self.height * self.width)
+
+    def display(self):
+        """displays rectangle"""
+        print('\n' * self.y, end="")
+        for i in range(self.height):
+            print(' ' * self.x, end="")
+            print('#' * self.width)
+
+    def __str__(self):
+        """returns string of info about rectangle"""
+        return('[Rectangle] ({}) {}/{} - {}/{}'
+               .format(self.id, self.x, self.y, self.width, self.height))
+
+    def update(self, *args, **kwargs):
+        """assigns arguments to each attribute"""
+        if args:
+            keys = ['id', 'width', 'height', 'x', 'y']
+            for k, v in zip(keys, args):
+                setattr(self, k, v)
+        else:
+            keys = ['id', 'width', 'height', 'x', 'y']
+            if kwargs is not None:
+                for k, v in kwargs.items():
+                    if k in keys:
+                        setattr(self, k, v)
+
+    def to_dictionary(self):
+        """dictiobnary representation of rectangle"""
+        my_dic = {}
+        keys = ['id', 'width', 'height', 'x', 'y']
+
+        for k in keys:
+            my_dic[k] = getattr(self, k)
+        return

@@ -6,13 +6,11 @@
 
 class Base:
     """ base class """
+    __nb_objects = 0
 
     def __init__(self, id=None):
         """ first class method """
         self.id = id
-        self.__nb_objects = 0
-        if id == None:
-            self.__nb_objects += 1
-            print(self.__nb_objects)
-
-            
+        if id is None:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
