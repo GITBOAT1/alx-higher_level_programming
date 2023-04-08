@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-"""
-Defines the class Rectangle
-"""
 from models.base import Base
 """
 Defines the class Rectangle
@@ -14,11 +11,6 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """constructor, initialize the private vales
-         Args
-           width
-           height
-           x
-           y
         """
         self.__width = width
         self.__height = height
